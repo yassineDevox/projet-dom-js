@@ -82,6 +82,7 @@ function onDeleteItem(id) {
 
 
 function AfficherShoppingCart(){
+    var total=0;
      // je cible ul 
         var list_command = document.getElementById("list-commands");
         list_command.innerHTML = ""
@@ -113,10 +114,14 @@ function AfficherShoppingCart(){
                 //ajouter a la liste ul 
                 list_command.innerHTML += shopping_item
 
-
+                total+=command.prix*command.quantity
             }
 
+            
         }
-
+        //cibler la lelement total-price
+        document.
+        getElementById("total-price").
+        innerText="Total : "+total+" $"
     }
 
