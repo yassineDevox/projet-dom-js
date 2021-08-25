@@ -44,7 +44,7 @@ AfficherShoppingCart()
 function onAddQuantity(id){
     //chercher command par lid 
     for (const command of COMMANDES) {
-        if(command.id==id){
+        if(command?.id==id){
             command.quantity++;
         }
     }
