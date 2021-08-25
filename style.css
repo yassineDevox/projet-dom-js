@@ -1,0 +1,132 @@
+main{
+    border:solid .5px;
+    width: 70%;
+    margin:300px auto;
+    padding: 4px;
+
+}
+
+/* main >header{
+    width: 20%;
+    border:solid red;
+    margin:0 auto;
+    position: relative;
+    top:-10px
+} */
+main >header{
+    width: fit-content;
+    border:solid .5px;
+    margin:0 auto;
+    margin-top: -45px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* circle */
+.circle{
+    border:solid .5px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 226px;
+    z-index: -1;
+    left: 47.6%;
+    position: absolute;
+}
+/* circle icon */
+.circle-icon{
+    border: solid .5px transparent;
+    border-radius: 50%;
+    height: 46px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    margin-top: -38px;
+    background-color: white;
+}
+.circle-icon i{font-size: 1.4em;}
+
+main >header h2{
+    margin: 2px;
+    text-shadow: 1px 0px 3px #0000007d;
+}
+
+main>header h2:nth-child(3){
+    margin-top: -11px!important;
+}
+
+/* HEADER SECTION */
+section header{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* total price  */
+section header p{
+    border-bottom: solid .5px;
+}
+.search input{
+    padding: 4px;
+}
+.search i{
+    position: relative;
+    left: -25px;
+    top:2px
+}
+
+/* shopping-cart-item */
+
+section ul{padding: 0;}
+.shopping-cart-item{
+    display: flex;
+    border: solid .5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.shopping-cart-item img{
+    width: 80px;
+}
+.shopping-cart-item div:first-child{display: flex;/* padding: 10px; */}
+
+.item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: solid; */
+    margin: 8px;
+    margin-left: 9px;
+}
+
+/* PAGINNATION */
+.pagination ul{
+    list-style: none;
+    display: flex;
+    margin-left: 30px;
+}
+.pagination ul li {
+    padding: 4px 10px;
+    text-align: center;
+    border:solid .5px;
+    border-color:transparent;
+    background-color:#00000021;
+    margin-left: 6px;
+}
+
+.active{
+    border-color:black!important;
+    background-color: white!important;
+}
+
+/* SECTION FOOTER  */
+main section:last-child
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
