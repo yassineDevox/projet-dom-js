@@ -30,47 +30,27 @@ var COMMANDES = [
 ]
 
 //Afficher la liste des commandes 
-
-// je cible ul 
-var list_command = document.getElementById("list-commands");
-
-//parcourir la liste des commands 
-for (var command of COMMANDES) {
-    //
-    var shopping_item = `
-    <li class="shopping-cart-item">
-    <div>
-        <img src="${command.thumnail}" alt="${command.title}" />
-        <p class="item-info">
-            <span>${command.title}</span>
-            <span>${command.prix}$</span>
-        </p>
-    </div>
-    <div>
-        <button>-</button>
-        <input type="number" value="${command.quantity}" />
-        <button>+</button>
-        <button onclick="onDeleteItem(${command.id})">
-            <i class="fa fa-trash-alt"></i>
-        </button>
-    </div>
-    </li> 
-    `
-    //ajouter a la liste ul 
-    list_command.innerHTML += shopping_item
-    // console.log(command);
-}
+AfficherShoppingCart()
 
 
 
 
-
-console.log(list_command)
 
 
 
 
 ////------- Functions --------------
+
+function onAddQuantity(id){
+    //chercher command par lid 
+    for (const command of COMMANDES) {
+        if(command.id==id){
+            command.quantity++;
+        }
+    }
+    AfficherShoppingCart()
+    console.table(COMMANDES)
+}
 
 
 function onDeleteItem(id) {
@@ -83,10 +63,15 @@ function onDeleteItem(id) {
                 && COMMANDES[i].id == id)
                 delete COMMANDES[i]
         }
+        AfficherShoppingCart();
+    }
 
-        console.table(COMMANDES)
 
-        // je cible ul 
+}
+
+
+function AfficherShoppingCart(){
+     // je cible ul 
         var list_command = document.getElementById("list-commands");
         list_command.innerHTML = ""
         //parcourir la liste des commands 
@@ -105,7 +90,7 @@ function onDeleteItem(id) {
             <div>
                 <button>-</button>
                 <input type="number" value="${command.quantity}" />
-                <button>+</button>
+                <button onclick="onAddQuantity(${command.id})">+</button>
                 <button onclick="onDeleteItem(${command.id})">
                     <i class="fa fa-trash-alt"></i>
                 </button>
@@ -119,8 +104,6 @@ function onDeleteItem(id) {
             }
 
         }
-        console.table(COMMANDES)
+
     }
 
-
-}
