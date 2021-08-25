@@ -122,6 +122,6 @@ function AfficherShoppingCart(){
         //cibler la lelement total-price
         document.
         getElementById("total-price").
-        innerText="Total : "+total+" $"
+        innerText="Total : "+total.toFixed(2)+" $"
     }
 
