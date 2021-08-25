@@ -41,6 +41,17 @@ AfficherShoppingCart()
 
 ////------- Functions --------------
 
+
+function onMinusQuantity(id){
+    //chercher command par lid 
+    for (const command of COMMANDES) {
+        if(command?.id==id && command?.quantity>1){
+            command.quantity--;
+        }
+    }
+    AfficherShoppingCart()
+    console.table(COMMANDES)
+}
 function onAddQuantity(id){
     //chercher command par lid 
     for (const command of COMMANDES) {
@@ -88,7 +99,9 @@ function AfficherShoppingCart(){
                 </p>
             </div>
             <div>
-                <button>-</button>
+
+
+                <button onclick="onMinusQantity(${command.quantity})">-</button>
                 <input type="number" value="${command.quantity}" />
                 <button onclick="onAddQuantity(${command.id})">+</button>
                 <button onclick="onDeleteItem(${command.id})">
