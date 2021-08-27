@@ -42,6 +42,13 @@ AfficherShoppingCart()
 ////------- Functions --------------
 
 
+function filterByTitle(){
+    //cibler linput search 
+    var input_filter = document.getElementById("filter-input")
+    console.log(input_filter.value)
+}
+
+
 function onMinusQuantity(id){
     //chercher command par lid 
     for (const command of COMMANDES) {

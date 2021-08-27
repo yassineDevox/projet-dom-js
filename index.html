@@ -29,7 +29,11 @@
         <section>
             <header>
                 <div class="search">
-                    <input type="search" placeholder="Search By Product Title" />
+                    <input 
+                    id="filter-input"
+                    type="search" 
+                    placeholder="Search By Product Title" 
+                    onkeyukp="filterByTitle()"/>
                     <i class="fas fa-search"></i>
                 </div>
                 <p id='total-price'></p>
